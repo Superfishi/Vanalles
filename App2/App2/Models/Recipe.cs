@@ -32,8 +32,6 @@ namespace App2.Models
 
                 OnPropertyChanged();
             }
-
-
         }
 
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)
