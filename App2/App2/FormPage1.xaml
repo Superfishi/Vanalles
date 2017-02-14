@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+            Padding="40"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.FormPage1">
+
+    <StackLayout HorizontalOptions="Center">
+        <Switch IsToggled="True" x:Name="switch"></Switch>
+
+        <Label Text="Test" IsVisible="{Binding Source={x:Reference switch}, Path=IsToggled}"></Label>
+
+        <Slider x:Name="slider" Maximum="255" Minimum="10" Value="50" WidthRequest="400" ValueChanged="slider_ValueChanged" />
+        <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:N0}'}"/>
+
+        <Stepper x:Name="stepper" Increment="5"/>
+        <Label Text="{Binding Source={x:Reference stepper}, Path=Value}" />
+
+        <Entry Keyboard="Numeric" Placeholder="Phone"/>
+
+        <Entry IsPassword="True" TextChanged="Entry_TextChanged" Completed="Entry_Completed" />
+
+        <Label x:Name="label1" />
+
+        <Editor BackgroundColor="Yellow" VerticalOptions="FillAndExpand" />
+
+    
+    </StackLayout>
+
+    
+</ContentPage>
